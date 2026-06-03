@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Account Deletion Request | SuperFlats</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f8f9fb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #5b2cff, #6c3cff);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      background: #5b2cff;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background: #4a22e0;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #777;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Account Deletion Request</h1>
+    <p style="color: white;">SuperFlats – User Account & Data Removal</p>
+  </header>
+
+  <div class="container">
+    <h2>Request Account Deletion</h2>
+    <p>
+      You can use this form to request deletion of your SuperFlats account and
+      any associated personal data. After verification, your account and data
+      will be permanently deleted.
+    </p>
+
+    <!-- SIMPLE FORM (can be handled by email or backend later) -->
+    <form action="delete-account.php" method="POST">
+      <label for="email">Registered Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="your@email.com">
+
+      <label for="message">Additional Information (optional)</label>
+      <textarea id="message" name="message"></textarea>
+
+      <button type="submit">Submit Deletion Request</button>
+    </form>
+
+
+    <p class="note">
+      Once your request is verified, your account and associated data will be
+      deleted within <strong>7 business days</strong>.
+    </p>
+  </div>
+
+  <a href="test/test.html">tets </a>
+
+  <footer>
+    © 2026 SuperFlats. All rights reserved.
+  </footer>
+
+</body>
+
+</html>
