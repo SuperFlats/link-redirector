@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Opening SuperFlats...</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.onload = function() {
+            // 1. Extract the listing ID parameter out of the URL string
+            const urlParams = new URLSearchParams(window.location.search);
+            const listingId = urlParams.get('id') || '';
+
+            // 2. Construct your working Android deep link protocol
+            const appUrl = "superflats://listing?id=" + listingId;
+            
+            // 3. Fallback destination link (Your Play Store application download link)
+            const fallbackUrl = "https://play.google.com/store/apps/details?id=com.superflats.app.client";
+
+            // 4. Try to force launch the mobile app instantly
+            window.location.href = appUrl;
+
+            // 5. If the app isn't installed, the page stays open. 
+            // We redirect them to the Play Store automatically after a 2-second timeout window.
+            setTimeout(function() {
+                window.location.href = fallbackUrl;
+            }, 2000);
+        };
+    </script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; text-align: center; padding-top: 100px; color: #111827; }
+        .spinner { border: 4px solid #f3f3f3; border-top: 4px solid #6D28D9; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 20px auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="spinner"></div>
+    <h2>Opening property inside SuperFlats...</h2>
+    <p style="color: #6B7280; font-size: 14px;">If the app doesn't open automatically, we'll redirect you to the download page.</p>
+</body>
+</html>
