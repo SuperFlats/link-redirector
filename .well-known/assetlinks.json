@@ -1,11 +1,15 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.superflats.app.client",
-      "sha256_cert_fingerprints":
-        ["08:F8:42:A1:9A:C4:68:90:74:40:84:D1:6E:2B:72:93:7E:17:2C:31:BC:00:FC:CA:05:9A:47:46:3F:C8:70:BF"]
+      "sha256_cert_fingerprints": [
+        "08:F8:42:A1:9A:C4:68:90:74:40:84:D1:6E:2B:72:93:7E:17:2C:31:BC:00:FC:CA:05:9A:47:46:3F:C8:70:BF"
+      ]
     }
   }
 ]
